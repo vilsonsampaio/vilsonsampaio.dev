@@ -16,7 +16,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   
-  background: url('img/noise.png') repeat center center;
+  background-image: url('img/noise.png');
   background-color: #1B1F2A;
   color: #FFF;
 
@@ -140,4 +140,8 @@ footer p {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;  
+}
+
+#orcamento {
+  background-image: none;
 }
