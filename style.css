@@ -35,11 +35,10 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1140px;
   
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 .shadow {
@@ -59,7 +58,7 @@ a {
 }
 
 header {
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 header .social {
@@ -113,7 +112,7 @@ main p {
 }
 
 footer {
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 footer .container {
@@ -144,4 +143,53 @@ footer p {
 
 #orcamento {
   background-image: none;
+}
+
+@media (max-width: 960px) {
+  header .social {
+    justify-content: center;
+  }
+
+  main .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  main .content {
+    max-width: none;
+
+    text-align: center;
+  }
+
+  main .logo {
+    display: none;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer p {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  footer a {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-height: 600px) {
+  main {
+    margin: 60px 0;
+  }
 }
