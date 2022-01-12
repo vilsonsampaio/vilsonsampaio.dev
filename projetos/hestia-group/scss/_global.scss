@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+  color: #23292e;
+
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-align: left;
+  text-decoration: none;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  list-style: none;
+
+  border: 0;
+  outline-color: #edd100;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  appearance: none;
+}
+
+// Animação loading
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.loading-container {
+  display: none;
+}
+
+.loading {
+  overflow: hidden;
+  
+  .loading-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 100vw;
+    height: 100vh;
+  
+    background: #FFFFFF;
+  
+    z-index: 999;
+  }
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+  
+    border: 6px solid #e5e5e5;
+    border-top-color: #edd100;
+    border-radius: 50%;
+    
+    animation: is-rotating 0.8s infinite;
+  }
+}
+
+// Definição de outros estilos
+.container {
+  width: 1158px;
+
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+
+    max-width: 1158px;
+  }
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 52px;
+  width: 168px;
+
+  background: #edd100;
+  color: #18181b !important;
+
+  border-radius: 4px;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 52px;
+  width: 168px;
+
+  background: transparent;
+
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+.btn-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 62px;
+
+  background: #27272A;
+  color: #FFFFFF;
+  
+  font-weight: 700;
+  font-size: 16px;
+
+  border-radius: 4px;
+
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+
+  text-align: center;
+
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+
+  text-align: center;
+
+  color: #18191f;
+
+  .title + & {
+    margin-top: 10px;
+  }
+}

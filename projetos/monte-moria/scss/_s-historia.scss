@@ -1,0 +1,52 @@
+.s-historia {
+  padding: 12rem 0 8.8rem;
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  img {
+    width: 55.2rem;
+    height: 51.8rem;
+
+    object-fit: cover;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 5.6rem 6.4rem 5.6rem 3.8rem;
+
+    background: #fff;
+
+    transform: translateX(-16.8rem);
+
+    z-index: 2;
+
+    h1 {
+      max-width: 16.8rem;
+
+      margin-right: 2.4rem;
+    }
+
+    div {
+      h2 {
+        margin-bottom: 2.4rem;
+
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 1.5;
+
+        color: var(--brand-black);
+      }
+
+      p:not(:first-child) {
+        margin-top: 1.6rem;
+      }
+    }
+  }
+}

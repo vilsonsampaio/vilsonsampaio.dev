@@ -1,0 +1,165 @@
+.s-parceiros {
+  .container {
+    padding-top: 136px;
+  }
+
+  .slide-parceiros {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fafafa;
+
+    margin-top: 55px;
+    padding: 72px 0;
+
+    overflow: hidden;
+
+    .swiper-button-disabled {
+      opacity: 0.2;
+      cursor: default!important;
+    }
+
+    .chevron-left {
+      position: absolute;
+      left: 16px;
+
+      cursor: pointer;
+
+      transform: rotate(180deg);
+
+      z-index: 99;
+    }
+
+    .chevron-right {
+      position: absolute;
+      right: 16px;
+
+      cursor: pointer;
+
+      z-index: 99;
+    }
+
+    .swiper-slide {
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .partner-pic {
+        width: 360px;
+        height: 360px;
+
+        border: 2px solid #e4e4e7;
+        border-radius: 4px;
+
+        object-fit: cover;
+
+        overflow: hidden;
+      }
+
+      .text {
+        max-width: 360px;
+
+        margin-left: 120px;
+
+        h5 {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 30px;
+
+          color: #27272a;
+
+          letter-spacing: 2px;
+
+          text-transform: uppercase;
+        }
+
+        h2 {
+          margin-top: 8px;
+          padding-bottom: 16px;
+
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 1.2;
+
+          color: #000000;
+
+          border-bottom: solid 1px #1b1b1b;
+        }
+
+        p {
+          margin-top: 16px;
+
+          font-size: 14px;
+          line-height: 1.5;
+
+          color: #707070;
+        }
+
+        .partner-services-icons {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          margin-top: 64px;
+
+          > svg:not(:last-child) {
+            margin-right: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .s-parceiros {
+    .slide-parceiros {
+      .chevron-left, .chevron-right {
+        top: 30vw;
+      }
+
+      .chevron-left {
+        left: 0;
+      }
+      
+      .chevron-right {
+        right: 0;
+      }
+
+      .swiper-slide {
+        .content {
+          flex-direction: column;
+        }
+
+        .partner-pic {
+          width: 45vw;
+          height: 45vw;
+        }
+
+        .text {
+          margin-top: 36px;
+          margin-left: 0;
+
+          h5, h2, p {
+            text-align: center;
+          }
+
+          h2 {
+            font-size: 32px;
+          }
+
+          .partner-services-icons {
+            justify-content: center;
+
+            margin-top: 55px;
+          }
+        }
+      }
+    }
+  }
+}

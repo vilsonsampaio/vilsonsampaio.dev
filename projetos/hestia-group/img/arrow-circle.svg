@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="#D6D1CD"/>
+<path d="M17 24L31 24" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+<path d="M24 31L31 24L24 17" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+</g>
+</svg>

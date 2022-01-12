@@ -1,0 +1,163 @@
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1.6rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.s-ensino {
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 1.5rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      width: 25.6rem;
+
+      padding: 2.4rem 3.8rem;
+
+      color: #fff;
+
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+
+      &:nth-child(1) {
+        background: var(--brand-orange);
+
+        border-bottom-left-radius: 1.6rem;
+      }
+
+      &:nth-child(2) {
+        background: var(--brand-green);
+      }
+
+      &:nth-child(3) {
+        background: var(--brand-black);
+
+        border-bottom-right-radius: 1.6rem;
+      }
+
+      img {
+        width: auto;
+        height: 4.8rem;
+
+        margin-bottom: 1.8rem;
+      }
+    }
+  }
+
+  .scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 10.4rem;
+    height: 10.4rem;
+
+    border: solid 0.2rem var(--brand-green);
+    border-radius: 50%;
+
+    img {
+      width: auto;
+      height: 1rem;
+
+      animation: scroll-down 1.75s infinite;
+    }
+  }
+
+  .cta-visita {
+    height: 50.4rem;
+
+    margin-top: 18rem;
+    padding: 0 1.5rem;
+    
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      padding-left: 9.6rem;
+
+      background: var(--background);
+
+      border-radius: 1.6rem 0 0 1.6rem;
+
+      h1 {
+        max-width: 45.6rem;
+
+        margin-bottom: 1.6rem;
+      }
+
+      p {
+        max-width: 36rem;
+
+        margin-bottom: 4rem;
+
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1.2;
+
+        color: var(--brand-black);
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 7.2rem;
+
+        padding: 0 4.8rem;
+
+        background: var(--brand-black);
+        color: #FFF;
+
+        border-radius: 0.8rem;
+
+        transition: background 0.5s ease;
+        
+        &:hover {
+          background: var(--brand-green);
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+
+      background: var(--brand-green);
+
+      border-radius: 0 1.6rem 1.6rem 0;
+
+      img {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

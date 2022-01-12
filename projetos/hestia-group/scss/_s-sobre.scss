@@ -1,0 +1,411 @@
+.video-thumb {
+  position: relative;
+
+  width: 100%;
+  height: 396px;
+  
+  transition: transform 0.25s ease-out;
+
+  cursor: pointer;
+
+  .thumb {
+    width: 100%;
+    height: 396px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+    
+    overflow: hidden
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.s-sobre {
+  position: relative;
+
+  width: 100%;
+  height: 900px;
+
+  background: #27272a;
+  
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 65%;
+    height: 100%;
+
+    background: #27272a;
+
+    z-index: 2;
+
+    transition: width 0.3s ease;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    width: 35%;
+    height: 100%;
+
+    background: #edd100;
+
+    z-index: 2;
+
+    transition: width 0.3s ease;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 648px 360px;
+    gap: 120px;
+
+    height: 100%;
+
+    padding: 120px 0;
+  }
+
+  .left, .right {
+    overflow: hidden;
+
+    z-index: 4;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  
+  .title {
+    margin-top: 32px;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    transition: transform 0.25s ease-out;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    transition: all 0.25s ease-out;
+
+    .description {
+      min-height: 160px;
+      max-width: 360px;
+
+      color: #ffffff;
+    }
+
+    .btn-primary {
+      width: 192px;
+      height: 68px;
+
+      color: #27272a;
+    }
+  }
+
+  .open-tab-button {
+    position: relative;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 300px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+
+    color: #000000;
+
+    transition: all 0.3s ease, transform 30s ease;
+
+    outline: none;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+
+      width: 234px;
+      height: 234px;
+
+      background: url("../img/what.svg") center center no-repeat;
+      background-size: cover;
+
+      transition: transform 1s ease;
+    }
+
+    &:hover {
+      &::after {
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+      }
+    }
+
+    &.open-como-button {
+      opacity: 1;
+      pointer-events: initial;
+
+      &::after {
+        background: url("../img/what.svg") center center no-repeat;
+      }
+
+      &:hover {
+        &::after {
+          transform: scale(1.1);
+          transition: transform 0.2s ease;
+        }
+      }
+    }
+
+    &.open-o-que-button {
+      opacity: 0;
+      pointer-events: none;
+
+      color: #FFF;
+
+      &::after {
+        background: url("../img/how.svg") center center no-repeat;
+      }
+
+      &:hover {
+        &::after {
+          transform: scale(1.1);
+          transition: transform 0.2s ease;
+        }
+      }
+    }
+  }
+
+  &.opened-o-que {
+    &::before {
+      width: 65%;
+    }
+
+    &::after {
+      width: 35%;
+    }
+    
+    .right {
+      > img,
+      .title,
+      .content {
+        display: none;
+
+        transform: translateX(0);
+      }
+    }
+
+    .open-o-que-button {
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all 0.3s ease;
+
+      &::after {
+        transform: scale(20);
+      }
+    }
+  }
+
+  &.opened-como {
+    .open-como-button {
+      opacity: 0;
+      pointer-events: none;
+
+      &::after {
+        transform: scale(20);
+      }
+    }
+
+    // new elements
+    &::before {
+      width: 35%;
+    }
+
+    &::after {
+      width: 65%;
+    }
+
+    .left {
+      width: 100%;
+      justify-content: flex-end;
+
+      .video-thumb,
+      .title,
+      .content {
+        display: none;
+  
+        transform: translateX(-200%);
+      }
+    }
+
+    .right {
+      align-items: flex-start;
+      justify-content: center;
+      
+      width: 100%;
+
+      > img {
+        width: 100%;
+
+        border-radius: 4px;
+      }
+
+      .title, .description {
+        color: #18181B;
+      }
+
+      .btn-primary {
+        background: #18181B;
+        color: #FFFFFF!important;
+      }
+    }
+
+    .container {
+      grid-template-columns: 360px 648px;
+    }
+
+    .open-o-que-button {
+      opacity: 1; 
+
+      pointer-events: initial;
+      
+      &::after {
+        transform: scale(1);
+
+        transition: transform 1s ease;
+      }
+    }
+  }
+}
+
+.s-sobre-mobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .s-sobre {
+    display: none;
+  }
+
+  .s-sobre-mobile {
+    display: initial;
+
+    .o-que-wrapper {
+      background: #27272A;
+    }
+    
+    .como-wrapper {
+      background: #EDD100;
+
+      img {
+        width: 100%;
+
+        border-radius: 4px;
+      }
+
+      .title, .description {
+        color: #27272A;
+      }
+
+      svg > path {
+        fill: #27272A;
+      }
+
+      .btn-primary {
+        background: #27272A;
+        color: #FFFFFF!important;
+      }
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 72px 0;
+    }
+    
+    .video-thumb {
+      height: auto;
+
+      .thumb {
+        height: 100%;
+      }
+    }
+    
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+
+      margin-top: 50px;
+
+      color: #FFFFFF;
+
+      line-height: 1;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .description {
+      margin: 32px 0;
+
+      color: #FFFFFF;
+      
+      text-align: center;
+    }
+
+    .btn-primary {
+      width: 100%;
+      height: 68px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.s-faq {
+  .container {
+    max-width: 552px;
+
+    padding-top: 120px;
+  }
+
+  .faq-container {
+    margin-top: 40px;
+  }
+  
+  .faq-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #C4C4C4;
+
+    cursor: pointer;
+
+    &:after {
+      content: "";
+
+      width: 30px;
+      height: 30px;
+      
+      background: url("../img/triangle.svg");
+
+      transition: transform 0.3s;
+    }
+
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+
+    &.active {
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+
+    span {
+      flex: 1;
+
+      color: #222229;
+
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  .faq-content {
+    max-height: 0;
+
+    font-family: 'Manrope';
+    font-size: 14px;
+    line-height: 32px;
+    
+    color: #18191F;
+    
+    overflow: hidden;
+    
+    transition: 0.4s ease all;
+    
+    &.active {
+      max-height: 150px;
+      
+      padding: 15px 0 25px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .s-faq {
+    .faq-title {
+      span {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}

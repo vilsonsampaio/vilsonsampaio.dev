@@ -1,0 +1,222 @@
+.s-proposta {
+  .container {
+    position: relative;
+
+    margin-top: 120px;
+  }
+
+  .form-content {
+    max-width: 840px;
+
+    padding: 72px 95px;
+
+    background: #f4f4f5;
+
+    border-radius: 4px;
+  }
+
+  .invoice-form {
+    max-width: 456px;
+
+    .title {
+      text-align: left;
+
+      margin-bottom: 44px;
+    }
+
+    .conditional-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      
+      margin-top: 24px;
+
+      transition: all 0.3s ease;
+
+      .input-block + .input-block {
+        margin-top: 0;
+      }
+
+      + .input-block {
+        margin-top: 24px;
+      }
+
+      &.hide {
+        display: none;
+
+        transition: all 0.3s ease;
+      }
+    }
+
+    .input-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      + .input-block {
+        margin-top: 24px;
+      }
+
+      &.options {
+        flex-direction: row;
+        align-items: center;
+
+        label {
+          line-height: 32px;
+        }
+
+        .checkbox {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          margin-left: 20px;
+
+          color: #18191f;
+
+          opacity: 0.2;
+
+          cursor: pointer;
+
+          transition: opacity 0.2s ease;
+
+          .circle {
+            width: 20px;
+            height: 20px;
+
+            margin-right: 6px;
+
+            border: solid 2px #000000;
+            border-radius: 50%;
+
+            &::after {
+              content: '';
+
+              width: 10px;
+              height: 10px;
+
+              background: #edd100;
+
+              border-radius: 50%;
+
+              transform: scale(0);
+
+              transition: transform 0.2s ease;
+            }
+          }
+
+          &.checked {
+            opacity: 1;
+
+            .circle {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              &::after {
+                transform: scale(1);
+              }
+            }
+          }
+        }
+      }
+
+      label {
+        color: #231f20;
+
+        line-height: 14px;
+      }
+
+      input[type='text'],
+      input[type='number'] {
+        width: 100%;
+        height: 40px;
+
+        margin-top: 8px;
+        padding: 16px;
+
+        background: #ffffff;
+        color: #231f20;
+
+        line-height: 14px;
+
+        border: solid 1px #ced4da;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 127px;
+
+        margin-top: 8px;
+        padding: 16px 24px;
+
+        background: #ffffff;
+        color: #231f20;
+
+        border: solid 1px #ced4da;
+
+        resize: vertical;
+      }
+    }
+
+    .btn-form {
+      max-width: 264px;
+
+      margin-top: 62px;
+      margin-left: auto;
+    }
+  }
+
+  .form-image {
+    position: absolute;
+    top: -24px;
+    right: 20px;
+
+    width: 456px;
+    height: 675px;
+
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1200px) {
+  .s-proposta {
+    background: #f4f4f5;
+    
+    border-radius: 4px;
+
+    .form-content {
+      max-width: 100%;
+
+      padding: 72px 0;
+    }
+
+    
+    .invoice-form {
+      max-width: initial;
+      
+      .btn-form {
+        max-width: inherit;
+
+        margin-left: 0;
+      }
+    }
+
+    .form-image {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .s-proposta {
+    .invoice-form {
+      .conditional-inputs {
+        label {
+          max-width: 120px;
+        }
+      }
+    }
+  }
+}

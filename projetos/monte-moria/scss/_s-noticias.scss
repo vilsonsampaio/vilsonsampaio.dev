@@ -1,0 +1,151 @@
+.s-noticias {
+  padding: 10.4rem 0;
+
+  .cta-mobile {
+    display: none;
+  }
+  
+  .row:first-child {
+    a {
+      align-self: flex-end;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      margin-left: auto;
+
+      color: var(--brand-black);
+
+      text-align: right;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        margin-left: 0.8rem;
+      }
+    }
+  }
+
+  .noticias-wrapper {
+    margin-top: 5.6rem;
+
+    .noticia {
+      position: relative;
+
+      display: block;
+
+      background: #fff;
+
+      border: solid 0.1rem var(--border);
+      border-radius: 0.8rem;
+
+      transition: all 0.3s ease;
+
+      > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        z-index: 1;
+      }
+
+      .image {
+        position: relative;
+
+        width: 100%;
+        height: 26.4rem;
+
+        .category {
+          position: absolute;
+          top: 1.6rem;
+          left: 1.6rem;
+
+          padding: 0.8rem;
+
+          background: var(--brand-orange);
+          color: #ffffff;
+
+          font-weight: 500;
+          font-size: 1.2rem;
+          line-height: 1.2;
+
+          border-radius: 0.4rem;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+          
+          border-radius: 0.8rem 0.8rem 0 0;
+
+          overflow: hidden;
+        }
+      }
+
+      .info {
+        padding: 2.4rem 1.6rem;
+
+        > div {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          h2 {
+            display: -webkit-box;
+
+            height: 4.4rem;
+
+            max-width: 24.8rem;
+
+            margin-bottom: 1.6rem;
+
+            color: var(--brand-black);
+
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            
+            overflow: hidden;
+          }
+
+          .share-btn {
+            display: block;
+
+            z-index: 2;
+
+            svg path {
+              transition: fill 0.3s ease;
+            }
+
+            &:hover svg path {
+              fill: var(--brand-orange);
+            }
+          }
+        }
+        
+        p {
+          font-size: 1.2rem;
+
+          color: #a1a1aa;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0px 51px 80px rgba(34, 34, 41, 0.07), 0px 11.3915px 17.869px rgba(34, 34, 41, 0.0417275), 0px 3.39155px 5.32008px rgba(34, 34, 41, 0.0282725);
+
+        transform: translateY(-0.8rem);
+      }
+    }
+  }
+}

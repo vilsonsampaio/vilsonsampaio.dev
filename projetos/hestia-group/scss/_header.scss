@@ -1,0 +1,178 @@
+.btn-wpp {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+
+  background: #66d458;
+
+  border-radius: 50%;
+
+  z-index: 20;
+}
+
+@media (max-width: 1200px) {
+  .btn-wpp {
+    width: 60px;
+    height: 60px;
+
+    > svg {
+      width: 60%;
+      height: auto;
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 72px;
+  background-color: #27272a;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  .logo {
+    > svg {
+      width: auto;
+      height: 44px;
+    }
+  }
+
+  .menu-desktop {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;  
+
+    a,
+    button {
+      color: #FFFFFF;
+
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+
+      outline: none;
+    }
+
+    > a {
+      margin: 0 24px;
+
+      &.proposta {
+        margin-left: 29px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  .menu-mobile,
+  .menu-mobile-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    .menu-desktop {
+      display: none;
+    }
+
+    .menu-mobile-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+
+      margin-left: auto;
+      padding: 4px 3px;
+
+      outline: none;
+
+      &.opened {
+        display: none;
+      }
+    }
+
+    .menu-mobile {
+      position: fixed;
+      top: 72px;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: calc(100vh - 72px);
+
+      z-index: 10;
+
+      background: #27272a;
+
+      transform: translateY(100%);
+      pointer-events: none;
+
+      transition: transform 0.2s ease;
+
+      &.opened {
+        transform: translateY(0);
+        pointer-events: initial;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      a,
+      button {
+        color: #FFFFFF;
+  
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+  
+        outline: none;
+      }
+      
+      .nav-list {
+        display: flex;
+        flex-direction: column;
+        
+        margin: 72px 0;
+
+        li {
+          text-align: center;
+
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+        }
+      }
+
+      .contato {
+        margin-top: 16px;
+      }
+
+      
+    }
+  }
+}
